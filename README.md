@@ -13,7 +13,7 @@ Today we'll be using the OpenTelemetry Astro Shop app to learn about the core pi
 
 ## Setup Instructions
 ### First, create your free New Relic account [here](https://newrelic.com/signup).
-- If you are currently verified through GitHub Education as a current student, log into your account and go to **Help > Resources > New Relic for Students > Manage Account Eligibility > GitHub Education** to allow New Relic to verify your student status. Additional data and ingest from the [New Relic for Students](https://newrelic.com/students) program will be automatically added to your account.
+- If you are currently verified through GitHub Education as a current student, log into your New Relic account and go to **Help > Resources > New Relic for Students > Manage Account Eligibility > GitHub Education** to allow New Relic to verify your student status. Additional data and ingest from the [New Relic for Students](https://newrelic.com/students) program will be automatically added to your account.
 - If you're not currently registered as a GitHub Education student, please go [here](https://education.github.com/pack) to sign up. Once you've been successfully verified as a student, you'll be able to follow the steps above to receive the New Relic for Students Benefits.
 
 ### Fork this repository! (Please do not clone)
