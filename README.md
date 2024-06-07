@@ -47,7 +47,7 @@ If you don't see this data appear in your New Relic account within a few minutes
 
 - It looks like the discounts being promoted in the ads are not being applied to the items in the cart at checkout. Which data type(s) could I look at to view the problem, and how do I solve it?
 - I'm not sure how the shipping is being calculated, as the total is rapidly increasing if I have more than one item in my cart. I want to change it to be a fixed price of $10. How would I change the shipping, and which service and data would I use to solve any errors produced with the change?
-- We learned that microservices, while running independently, are all connected to help run our applications. If I wanted to complete the checkout process, which services, from viewing the items I placed in my cart to payment completion, are working together? Take a screenshot of a Service Map to show the connection.
+- We learned that microservices, while running independently, are all connected to help run our applications. If I wanted to complete the checkout process, which services, from viewing the items I placed in my cart to payment completion, are working together? Take a screenshot of a Service Map to show the connection, and take a look in the Errors Inbox to see if you can find the problem.
 
 ## Resources
 [Get Started with New Relic](https://docs.newrelic.com/docs/new-relic-solutions/get-started/intro-new-relic/)
