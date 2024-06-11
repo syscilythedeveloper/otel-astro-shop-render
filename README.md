@@ -39,7 +39,7 @@ I'm looking to purchase some items and have them delivered in time for the next 
 ### Step 1: Add items
 Choose any 2 items from the Astro Shop and add them to your cart. For your second item, add multiple quantities of the items.
 ![Astro Shop Cart with two items](screenshots/step1.png)
-### Step 2: Add item from an 
+### Step 2: Add item from an ad
 Scroll to the bottom of an item's information page, you should see an ad for a discount off of one item. Click on the ad and then add that item to your cart.
 ![Astro Shop Ad](screenshots/step2.png)
 ### Step 3: Proceed to checkout
@@ -52,6 +52,7 @@ Feel free to enter whatever shipping information you want, or keep what's there.
 
 ### Step 4: Click on Place Order
 ![Place order button](screenshots/step4.png)
+
 This is the page that I should see after I click the Place order button, but I do not! This is what we should see after we do some debugging today.
 
 ### Step 5: Check your New Relic account
