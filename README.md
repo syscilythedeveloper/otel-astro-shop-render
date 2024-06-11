@@ -1,10 +1,10 @@
 # From Observation to Action: Exploring Debugging with New Relic
-With today's workshop, you'll gain an understanding of how observability helps software engineering teams to understand the health and performance of their systems—and see beyond not just what errors occur, but to know when and why.
+With today's workshop, you'll gain an understanding of how observability helps software engineering teams to understand the health and performance of their systems.
 
 Through today's presentation and hands-on exercises, you'll explore observability and will learn how these practices enable engineers to gain insights into the inner workings of their applications, diagnose issues effectively, and make informed decisions to enhance performance and reliability.
 
 ## Using New Relic for Debugging
-We'll be viewing the telemetry data we receive from the Astro Shop application on New Relic, an all-in-one observability platform that allows us to view telemetry data from different services and infrastructure.
+We'll be viewing the data we receive from the Astro Shop application today on New Relic, an all-in-one observability platform that allows us to view telemetry data from different services and infrastructure.
 
 ## About OpenTelemetry
 OpenTelemetry is an open source framework that's helping us rethink observability at the instrumentation level, by standardizing how our application data is generated, collected, and shipped.
@@ -21,11 +21,11 @@ Today we'll be using the OpenTelemetry Astro Shop app to learn about the core pi
 ### Add your New Relic license key to your application
 - In your New Relic account, click on your name, then click on API Keys
 - Under Type, find the key that says `INGEST - LICENSE`, click on the three dots at the end of the row, and click `Copy key`
-- Paste your New Relic license key in the otel-config-extras.yml file under exporters: api key
+- Paste your New Relic license key in the `otel-config-extras.yml` file under `exporters: api key`
 
 You're ready to run your application!
 ## Running the application
-Run the `make start` command.
+Run the `docker compose up` command.
 
 ## Stopping the application
 Stop the Codespace
@@ -34,13 +34,30 @@ Stop the Codespace
 ## The Task
 I'm looking to purchase some items and have them delivered in time for the next meteor shower this year so I can see all of the shooting stars! However, as I navigate the application, I am noticing that special deals are not being applied to select items, and I am not getting the correct total as I go to complete my purchase. I want to use New Relic and view the data that is coming in from the application so I can fix the bugs and have my order shipped.
 
-- Step 1: Choose any 2 items from the Astro Shop and add them to your cart. For your second item, add multiple quantities of the items.
+![Astro Shop App Homepage](screenshots/astroshop.png)
 
-- Step 2: Scroll to the bottom of an items information page, you should see an ad for a discount off of one item. Click on the ad and then add that item to your cart.
+### Step 1: Add items
+Choose any 2 items from the Astro Shop and add them to your cart. For your second item, add multiple quantities of the items.
+![Astro Shop Cart with two items](screenshots/step1.png)
+### Step 2: Add item from an 
+Scroll to the bottom of an item's information page, you should see an ad for a discount off of one item. Click on the ad and then add that item to your cart.
+![Astro Shop Ad](screenshots/step2.png)
+### Step 3: Proceed to checkout
+Feel free to enter whatever shipping information you want, or keep what's there. Enter the following card information under Payment Method:
+- Credit Card Number: 4432-8015-6152-0453
+- Expiration Date: January 2028
+- Security Code: 060
 
-- Step 3: Proceed to checkout. Feel free to enter whatever shipping information you want, or keep what's there. Enter the following card information under Payment Method, Credit Card Number: 4432-8015-6152-0453, Expiration Date: January 2028, Security Code: 060
-- Step 4: Click on Place Order
-- Step 4: In your New Relic account, you should see a list of 19 services with `opentelemetry` listed as the provider. This is how you know you've instrumented your application with New Relic correctly.
+![Checkout Page Payment Area](screenshots/step3.png)
+
+### Step 4: Click on Place Order
+![Place order button](screenshots/step4.png)
+This is the page that I should see after I click the Place order button, but I do not! This is what we should see after we do some debugging today.
+
+### Step 5: Check your New Relic account
+ In your New Relic account, you should see a list of 19 services with `opentelemetry` listed as the provider. This is how you know you've instrumented your application with New Relic correctly.
+![Services list](screenshots/services.png)
+
 If you don't see this data appear in your New Relic account within a few minutes, review the setup instructions.
 
 ## Today's Scenarios
