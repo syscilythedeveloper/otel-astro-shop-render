@@ -28,7 +28,7 @@ You're ready to run your application!
 Run the `make start` command.
 
 ## Stopping the application
-Exit the Codespace
+Stop the Codespace
 
 
 ## The Task
@@ -36,9 +36,9 @@ I'm looking to purchase some items and have them delivered in time for the next 
 
 - Step 1: Choose any 2 items from the Astro Shop and add them to your cart. For your second item, add multiple quantities of the items.
 
-- Step 2: Scroll to the bottom of the page, you should see an add for a discount off of one item. Click on the ad and then add that item to your cart.
+- Step 2: Scroll to the bottom of an items information page, you should see an ad for a discount off of one item. Click on the ad and then add that item to your cart.
 
-- Step 3: Proceed to checkout. Feel free to enter whatever shipping information you want, or keep what's there. Enter the following card information under Payment Method, Credit Card Number: 4432-8015-6152-0453, Expiration Date: January 2028, Security Code: 000
+- Step 3: Proceed to checkout. Feel free to enter whatever shipping information you want, or keep what's there. Enter the following card information under Payment Method, Credit Card Number: 4432-8015-6152-0453, Expiration Date: January 2028, Security Code: 060
 - Step 4: Click on Place Order
 - Step 4: In your New Relic account, you should see a list of 19 services with `opentelemetry` listed as the provider. This is how you know you've instrumented your application with New Relic correctly.
 If you don't see this data appear in your New Relic account within a few minutes, review the setup instructions.
