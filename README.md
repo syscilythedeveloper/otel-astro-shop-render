@@ -25,11 +25,10 @@ Today we'll be using the OpenTelemetry Astro Shop app to learn about the core pi
 
 You're ready to run your application!
 ## Running the application
-Run the `docker compose up` command.
+Run the `make start` command.
 
 ## Stopping the application
-Stop the Codespace
-
+Stop the Codespace under `code`
 
 ## The Task
 I'm looking to purchase some items and have them delivered in time for the next meteor shower this year so I can see all of the shooting stars! However, as I navigate the application, I am noticing that special deals are not being applied to select items, and I am not getting the correct total as I go to complete my purchase. I want to use New Relic and view the data that is coming in from the application so I can fix the bugs and have my order shipped.
@@ -53,7 +52,7 @@ Feel free to enter whatever shipping information you want, or keep what's there.
 ### Step 4: Click on Place Order
 ![Place order button](screenshots/step4.png)
 
-This is the page that I should see after I click the Place order button, but I do not! This is what we should see after we do some debugging today.
+This is the page that I should see after I click the Place order button.
 
 ### Step 5: Check your New Relic account
  In your New Relic account, you should see a list of 19 services with `opentelemetry` listed as the provider. This is how you know you've instrumented your application with New Relic correctly.
@@ -61,11 +60,22 @@ This is the page that I should see after I click the Place order button, but I d
 
 If you don't see this data appear in your New Relic account within a few minutes, review the setup instructions.
 
-## Today's Scenarios
+## Today's Scenario
 
-- It looks like the discounts being promoted in the ads are not being applied to the items in the cart at checkout. Which data type(s) could I look at to view the problem, and how do I solve it?
-- I'm not sure how the shipping is being calculated, as the total is rapidly increasing if I have more than one item in my cart. I want to change it to be a fixed price of $10. How would I change the shipping, and which service and data would I use to solve any errors produced with the change?
-- We learned that microservices, while running independently, are all connected to help run our applications. If I wanted to complete the checkout process, which services, from viewing the items I placed in my cart to payment completion, are working together? Take a screenshot of a Service Map to show the connection, and take a look in the Errors Inbox to see if you can find the problem.
+I want to order a new telescope and some items for the next meteor shower this summer. I'm going to explore the data coming from our applications into the New Relic platform to see if I can find out what's causing the problem. I'm going to explore our services, and show you how metrics, logs, and traces can help us figure out what's occuring with our systems and why.
+
+### Understanding Metrics
+
+### Viewing Logs
+
+### Checking Out Traces
+It looks like the error rate is up on the Checkout service. I want to first, think about all of the services that would work with the checkout service, and think about where the issue might be. Looking at the Service Map in the Checkout service is a great place to start. It's going to take some time to look through all of these services, especially since we know that each of the services, while experiencing their own issues, may not be affecting the checkout process. 
+
+New Relic actually has a feature called the **Errors inbox**, where I can get information from a trace if an error has occurred.
+
+Once I click on Errors Inbox, I see the Triage tab. Under the tab, I see that there is one error under `grpc.oteldemo.PaymentService/Charge,` once I click on this link, I can see the Error message that states that the credit card information is invalid.
+
+If you go to `loadgenerator/persons.json`, you'll see a list of valid credit card numbers that work for today's workshop. Choose a credit card number and press Place Order again, where you'll finally see the order confirmation page.
 
 ## Resources
 [Get Started with New Relic](https://docs.newrelic.com/docs/new-relic-solutions/get-started/intro-new-relic/)
