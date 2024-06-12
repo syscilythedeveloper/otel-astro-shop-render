@@ -40,14 +40,14 @@ Choose any 2 items from the Astro Shop and add them to your cart. For your secon
 ![Astro Shop Cart with two items](screenshots/step1.png)
 ### Step 2: Add item from an ad
 Scroll to the bottom of an item's information page, you should see an ad for a discount off of one item. Click on the ad and then add that item to your cart.
-![Astro Shop Ad](screenshots/step2.png)
+![Astro Shop Ad](screenshots/step3.png)
 ### Step 3: Proceed to checkout
 Feel free to enter whatever shipping information you want, or keep what's there. Enter the following card information under Payment Method:
 - Credit Card Number: 4432-8015-6152-0453
 - Expiration Date: January 2028
 - Security Code: 060
 
-![Checkout Page Payment Area](screenshots/step3.png)
+![Checkout Page Payment Area](screenshots/step2.png)
 
 ### Step 4: Click on Place Order
 ![Place order button](screenshots/step4.png)
