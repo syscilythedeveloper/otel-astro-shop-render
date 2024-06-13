@@ -77,7 +77,7 @@ To follow along:
 - If you choose the second option to see the data, you can run the query `SELECT sum(`app.frontend.requests`) FROM Metric WHERE `entity.name` = 'frontend' SINCE 30 MINUTES AGO TIMESERIES`. You can also change the time to 1 hour ago, 3 days ago, and 7 days ago.
 
 ### Viewing Logs
-Let's get back to figuring out what's going on with my order. Let's check out the cart service and see 
+
 
 ### Checking Out Traces
 It looks like the error rate is up on the Checkout service. I want to first, think about all of the services that would work with the checkout service, and think about where the issue might be. Looking at the Service Map in the Checkout service is a great place to start. It's going to take some time to look through all of these services, especially since we know that each of the services, while experiencing their own issues, may not be affecting the checkout process. 
