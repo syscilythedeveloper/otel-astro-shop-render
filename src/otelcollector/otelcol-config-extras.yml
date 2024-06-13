@@ -20,7 +20,7 @@ exporters:
   otlp/newrelic:
     endpoint: https://otlp.nr-data.net:4317
     headers:
-      api-key: #New Relic License Key Here
+      api-key: NRAK-ALQL2DGBMPL8GMLNFATFYT6DP1K
 
 service:
   pipelines:
