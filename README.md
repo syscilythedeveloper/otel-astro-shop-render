@@ -65,8 +65,19 @@ If you don't see this data appear in your New Relic account within a few minutes
 I want to order a new telescope and some items for the next meteor shower this summer. I'm going to explore the data coming from our applications into the New Relic platform to see if I can find out what's causing the problem. I'm going to explore our services, and show you how metrics, logs, and traces can help us figure out what's occuring with our systems and why.
 
 ### Understanding Metrics
+New Relic has a feature called the Metrics Explorer that allows us to build queries to see how our application is performing.
+
+I'm curious about the amount of traffic coming to the website, so I want to see how many requests are being made to the frontend service over the last 30 minutes.
+
+To follow along:
+- Click on `frontend` under `Services - Opentelemetry`
+- Click on `Metrics Explorer`
+- Click on `app.frontend.requests` to see the total number of requests made to the frontend in the last 30 minutes
+- You can also hover over the built query `SELECT sum(`app.frontend.requests`) FROM Metric WHERE `entity.guid` = 'MzQ5NzQ5NHxFWFR8U0VSVklDRXwtOTE1NDc5Mjc1MTAxMTIzODUxMA' SINCE 30 MINUTES AGO TIMESERIES` and click on `Build in...` to create your own query.
+- If you choose the second option to see the data, you can run the query `SELECT sum(`app.frontend.requests`) FROM Metric WHERE `entity.name` = 'frontend' SINCE 30 MINUTES AGO TIMESERIES`. You can also change the time to 1 hour ago, 3 days ago, and 7 days ago.
 
 ### Viewing Logs
+Let's get back to figuring out what's going on with my order. Let's check out the cart service and see 
 
 ### Checking Out Traces
 It looks like the error rate is up on the Checkout service. I want to first, think about all of the services that would work with the checkout service, and think about where the issue might be. Looking at the Service Map in the Checkout service is a great place to start. It's going to take some time to look through all of these services, especially since we know that each of the services, while experiencing their own issues, may not be affecting the checkout process. 
@@ -81,6 +92,8 @@ If you go to `loadgenerator/persons.json`, you'll see a list of valid credit car
 [Get Started with New Relic](https://docs.newrelic.com/docs/new-relic-solutions/get-started/intro-new-relic/)
 
 [Getting Started with APM](https://docs.newrelic.com/docs/apm/new-relic-apm/getting-started/introduction-apm/)
+
+
 
 [Introduction to OpenTelemetry with New Relic](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-introduction/)
 
